@@ -84,8 +84,14 @@ void date_fn_cb(Fl_Widget *w, void* data) {
 	// Make the Amortazition Table
 	if (fname != "") {
 		// Write table to file
-		cout << "Write table to file \"fname\".\n";
+		// create new file output buffer
+		filebuf buf;
+		buf.open(fname, ios::out);
+		// save old cout buffer and switch to new buffer
+		auto oldbuf = cout.rdbuf(&buf);
 		mkmorttable();
+		// switch cout back to standard output
+		cout.rdbuf(oldbuf);
 	}
 	else
 		//Write table to stdout

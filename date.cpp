@@ -27,9 +27,12 @@ using namespace std;
 		// date string: mm/dd/yyyy
 		// separate the date string into its
 		// month, day, and year elements
-
+		
+		// convert ints month, day and year to string "Date::Date"
 		istringstream convert{s};
 		convert >> month >> sepchar >> day >> sepchar >> year;
+		// correct for mal formed date such a leading zeros
+		sdate = to_string();
 		// Keep day number simple (no leap year)
 		if (day > 28) day = 28;
 
