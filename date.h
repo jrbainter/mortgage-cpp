@@ -8,7 +8,12 @@ using namespace std;
 
 class Date {
 	
-	public:
+private:
+	int year, month,day;
+	string sdate;
+	char sepchar;
+	
+public:
 	Date(int, int, int, char);
 	Date(string);
 	~Date();
@@ -17,12 +22,6 @@ class Date {
 	void add_month();
 	bool verify(const string&);
 	
-	private:
-	int year;
-	int month;
-	int day;
-	string sdate;
-	char sepchar;
 
 };
 		

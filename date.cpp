@@ -7,7 +7,6 @@
 
 
 using namespace std;
-
 	
 	string Date::to_string() {
 		ostringstream os;
@@ -51,8 +50,6 @@ using namespace std;
 		// rebuild string "sdate"
 		sdate = to_string();
 	}
-
-
 	
 	bool Date::verify(const string& s) {
 		// verify date formated correctly
@@ -60,5 +57,5 @@ using namespace std;
 		regex pat {R"((^0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$)"};
 		return regex_match(s, pat);
 	}
-		
+
 

@@ -17,7 +17,6 @@
 
 using namespace std;
 
-
 	Fl_Window* win;
 	Fl_Window* win1;
 	
@@ -157,7 +156,6 @@ void mk_ma_table() {
 	double cur_eq;
 	double tot_eq;
 	double tot_int;
-
 
 	Date* dd = new Date(due_date);
 	
